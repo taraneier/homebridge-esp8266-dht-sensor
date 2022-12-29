@@ -62,7 +62,7 @@ class ESP8266DHT {
     };
 
     try {
-      const { data } = await axios.get(`http://${this.ip}`);
+      const { data } = await axios.get(`http://${this.ip}/dht`);
 
       this.sensorData = refineData(data);
     } catch (error) {
